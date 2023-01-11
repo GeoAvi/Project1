@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To Do List</title>
+	<link rel="stylesheet" type="text/css" href="stylepro1.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm">
+	<link href='https://fonts.googleapis.com/css?family=Courgette&effect=neon|outline|emboss|shadow-multiple' rel='stylesheet'>
+	<script  src="https://kit.fontawesome.com/b3348ae33f.js"
+      crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+<!-- background structure for the todo list -->
+	<div class="grid-container">
+		<div class="grid-item grid-cont font-effect-shadow-multiple" > <b>Believe you can and you're halfway there. </b></div>
+		<div class="grid-item grid-empty"></div>
+		<div class="grid-item grid-cont font-effect-shadow-multiple"><b>Make each day your masterpiece.</b> </div>
+		<div class="grid-item grid-empty"></div>
+		<div class="grid-item grid-cont font-effect-shadow-multiple"><b>You can do it.</b></div>
+		<div class="grid-item grid-empty"> </div>
+		<div class="grid-item grid-empty"></div>
+		<div class="grid-item grid-cont font-effect-shadow-multiple"><b>Do the best you can.</b></div>
+		<div class="grid-item grid-cont font-effect-shadow-multiple"><b>Trust yourself that you can do it and get it.</b></div>
+		<div class="grid-item grid-empty"></div>
+		<div class="grid-item grid-empty"></div>
+		<div class="grid-item grid-cont font-effect-shadow-multiple"><b>Go for it.</b></div>
+		<div class="grid-item grid-cont font-effect-shadow-multiple"><b>Opportunities don't happen, you create them.</b></div>
+		
+		<!-- Region of the the todo List -->
+		<div class="grid-item1"> 
+			<!-- Title -->
+			<h2>Your To Do List</h2>
+			<!-- Input for the task and task details -->
+			<div id="container">
+			<input placeholder="Add a Task" class="AddTask" id="add" data-helloWord="asdasdas">
+			<br>
+			<div id ="task-details">
+				<span id="total-tasks"> Total tasks: <span id="task-counter">0</span></span>
+				<span id="total-tasks-completed"> Completion: <span id="task-comp-counter">0%</span></span>
+			</div>
+			<!-- List display -->
+			<ul id="list">
+			</ul>
+			</div>
+		</div>
+<!-- Popup message created for adding completing and deletion of the task -->
+	</div>
+		<div class="popup" id="popup">
+			<i class="fa-solid fa-comment fa-10x"></i>
+			<p> You can complete your new task.<br> Go for it!!!</p>
+			<button onclick="taskAddPopupClose()">OK</button>
+		</div>
+		<div class="togpopup" id="togpopup">
+			<i class="fa-solid fa-certificate fa-10x"></i>
+			<p>Task Completed<br> Keep it up!!!</p>
+			<button onclick="taskTogPopupClose()">OK</button>
+		</div>
+		<div class="taskcomppopup" id="taskcomppopup">
+			<i class="fa-solid fa-certificate fa-10x"></i>
+			<p>Your a Champ<br> Congratulation!!!</p>
+			<button onclick="taskCompPopupClose()">OK</button>
+		</div>
+		<!-- Javascript  -->
+<script src="scriptpro1.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+*{box-sizing: border-box;}
+
+body{
+	width: auto;
+	height: 400px;
+	background-color: #41b8f94f;
+	min-width: 760px;
+
+}
+.grid-container {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+  padding: 10px solid grey;
+ }
+
+/*outer structure or background of the todo list*/
+.grid-item {
+  background-color: #168bd5bd;
+  display: flex;
+  padding: 10px;
+  font-size: 17px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item1{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  background-color: #41b8f94f;
+}
+
+.grid-item1 h2{
+	font-size: 35px;
+	font-family: 'Charm', sans-serif;
+  text-shadow: 3px 3px 3px #2335878a;
+	color: #2d5dae;
+	text-align: center;
+  align-items: center;
+ 	justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.grid-cont{
+	font-family: 'Courgette', sans-serif;
+	border: 2px solid black;
+	background-color: #43a3df54;
+  color: #1f1f9de6;
+
+}
+
+.grid-empty{
+  background-color: #168bd5bd;
+}
+
+/*Container for the input of task and task detials*/
+
+#container{
+	width: auto;
+	font-size: 20px;
+	margin-left: 20%;
+  margin-top: 2px;
+}
+
+#add{
+	width: 80%;
+	font-size: 15px;
+}
+
+#task{
+ font-size:20px;
+ width: 500px;
+ text-align: center;
+
+}
+#task-details{
+  width: 80%;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: darkblue;
+  font-family: monospace;
+  margin-top: 5px;
+}
+
+        
+#total-tasks-completed{
+  	right: 32%;
+    position: absolute;
+}
+
+/*list styling*/
+ul {
+list-style-type: none;
+margin-left: -50px;
+padding: 0;
+margin-top: 5px;
+}
+
+ul li {
+  margin-left: -7%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+  font-size: 15px;
+}
+
+ul li:hover {
+  background: #5a63cd4f;
+
+}
+
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+}
+
+#list label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: #5a63cd00;
+  border: 2px solid black;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#list input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+
+}
+
+#list input:checked + label:before {
+  background: green;
+} 
+#list input:checked + label {
+  text-decoration: none;
+}
+
+/*Features of the To do List*/
+.delete {
+  height: 30px;
+  padding: 5px 0px;
+  border-radius: 3px;
+  margin-left: -50px;
+}
+
+.delete:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/*Popup stylings*/
+.popup{
+  position: absolute;
+  top:0%;
+  right:30%;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  transform: translate(-10% ,-50%) scale(0.1);
+  transition: transform 1s, top 1s;
+  visibility: hidden;
+}
+
+.togpopup{
+  position: absolute;
+  top:0%;
+  right:30%;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  transform: translate(-10% ,-50%) scale(0.1);
+  transition: transform 1s, top 1s;
+  visibility: hidden;
+}
+
+.taskcomppopup{
+  position: absolute;
+  top:0%;
+  right:30%;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  transform: translate(-10% ,-50%) scale(0.1);
+  transition: transform 1s, top 1s;
+  visibility: hidden;
+}
+
+.fa-comment {
+    color: #224eb97a;
+  }
+
+.fa-certificate {
+  color: #007d00;
+}
+
+p{
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+}
+
+.popup p{
+  top:30%;
+  right:0%;
+}
+
+.togpopup p{
+  top:30%;
+  right:19%;
+}
+
+.taskcomppopup p{
+  top:30%;
+  right:21%;
+}
+button{
+  position: absolute;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  background-color: #838cafd1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button{
+  top:67%;
+  right:42%;
+}
+
+.togpopup button{
+  top:67%;
+  right:42%;
+}
+
+.taskcomppopup button{
+  top:67%;
+  right:42%;
+}
+
+.open-popup{
+ 
+  top:72%;
+  right:30%;
+  transform: translate(-10% ,-50%) scale(1);
+  visibility: visible;
+  
+}
+  
+.togopen-popup{
+ 
+  top:72%;
+  right:30%;
+  transform: translate(-10% ,-50%) scale(1);
+  visibility: visible;
+  
+}
+.taskcomppopup-open{
+  top:72%;
+  right:30%;
+  transform: translate(-10% ,-50%) scale(1);
+  visibility: visible;
+}
+  
