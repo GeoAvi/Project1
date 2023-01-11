@@ -1,25 +1,20 @@
 # Project1
 Javascript Test
 
-TEST NAME: Todo list
+TO DO List
 
+A simple Todo list with vanilla JS is created.
 
-Problem statement
-Create a simple Todo list with vanilla JS (as you see in the GIF below). Vanilla JS means no plugins, no libraries, nothing.
+Features include adding a task in the input box and captured and saved in the list with Enter.
+Task can be marked as completed and also deleted from the List.
+Total No of task and completed task count is displayed.
 
-Instructions
-You are ALLOWED to style the todo list the way you like. Do whatever you want with the styling.
-You are ALLOWED to google and read how to approach the problem.
-DO NOT copy and paste code from the internet.
+Popup message box appears on adding deleting or completeing the task. And also for 100% completion of task.
 
-Hosting on Github is compulsory, I will be rejecting the submission if not hosted!
+On adding task the task is displayed and a popup messgae is displayed confirming the task is added.
+On marking a task as complete. The checkbox has tick mark and the background of which is changed to green. ALso a popup message box appears which stated that the task was completed.
+On hovering over the delete icon the icon zooms out and on clicking on it an alret appears that the task is deleted successfully.
 
+Styling has benn done using CSs for the font background, color combinations sizes animation and transition of the popup boxes.
 
-Features (No need for extra features, just make the listed features)
-A minimal design with HTML and CSS, it should look nice (no libraries, no frameworks).
-A text box at the top to add a todo item to the list.
-Add button: when a user clicks on the button, add that todo item to the list.
-A delete button to delete the todo item completely from the list.
-A checkbox to check the item off the list. (checked item should stay in the list, with some differentiation from rest of the todo items)
-Total number of tasks in the list.
-Extra points for creativity (think about user accessibility, some animations and things like that)
+The handelingh of the event of click and keypress has been taken care in the javascript.
