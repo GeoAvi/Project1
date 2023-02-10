@@ -17,4 +17,4 @@ On hovering over the delete icon the icon zooms out and on clicking on it an alr
 
 Styling has benn done using CSs for the font background, color combinations sizes animation and transition of the popup boxes.
 
-The handelingh of the event of click and keypress has been taken care in the javascript.
+The handling of the event of click and keypress has been taken care in the javascript.
